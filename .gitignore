@@ -1,0 +1,17 @@
+.env
+.env.staging
+devnotes.txt
+node_modules
+yarn.lock
+.DS_Store
+dist
+dist-ssr
+*.local
+out/
+storybook-static
+projects/mobile-t-backend/dist/
+projects/tMobileApp/public/sw.js
+yarn-error.log
+/coverage
+/build
+/android/app/build

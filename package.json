@@ -1,0 +1,56 @@
+{
+  "name": "mobile-t-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "projects/frontend/tMobileApp",
+    "projects/backend/mobile-t-backend"
+  ],
+  "scripts": {
+    "start": "yarn workspace mobile-t-app android",
+    "build": "yarn workspace mobile-t-app build",
+    "test": "yarn workspace mobile-t-app test",
+    "lint": "yarn workspace mobile-t-app lint",
+    "start:backend": "yarn workspace mobile-t-backend dev",
+    "build:backend": "yarn workspace mobile-t-backend build",
+    "test:backend": "yarn workspace mobile-t-backend test",
+    "lint:backend": "yarn workspace mobile-t-backend lint",
+    "dev": "concurrently \"yarn start\" \"yarn start:backend\"",
+    "lint:all": "yarn lint && yarn lint:backend"
+  },
+
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^2.4.1",
+    "nodemon": "^2.0.15",
+    "husky": "^7.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
