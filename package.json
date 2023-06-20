@@ -7,10 +7,10 @@
     "projects/backend/mobile-t-backend"
   ],
   "scripts": {
-    "start": "yarn workspace mobile-t-app android",
-    "build": "yarn workspace mobile-t-app build",
-    "test": "yarn workspace mobile-t-app test",
-    "lint": "yarn workspace mobile-t-app lint",
+    "start": "yarn workspace mobileTapp android",
+    "build": "yarn workspace mobileTapp build",
+    "test": "yarn workspace mobileTapp test",
+    "lint": "yarn workspace mobileTapp lint",
     "start:backend": "yarn workspace mobile-t-backend dev",
     "build:backend": "yarn workspace mobile-t-backend build",
     "test:backend": "yarn workspace mobile-t-backend test",
