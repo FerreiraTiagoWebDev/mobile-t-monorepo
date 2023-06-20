@@ -1,7 +1,6 @@
-import {TEXT_ALIGN} from '@/mobileTapp/constants';
+import {COLORS, TEXT_ALIGN} from '@/mobileTapp/constants';
 import React from 'react';
 import styled from 'styled-components/native';
-import Text from './Text';
 
 interface TextBaseProps {
   color?: COLORS;
@@ -34,30 +33,30 @@ const StyledView = styled.View`
   justify-content: space-between;
 `;
 
-// const StyledText = styled.Text<TextBaseProps>`
-//   color: ${props => props.color ?? props.theme.palette.black};
-//   font-size: ${({fontSize}) => fontSize}px;
-//   line-height: ${({lineHeight}) => lineHeight}px;
-//   text-decoration: ${({underline}) => (underline ? 'underline' : '')};
-//   text-decoration-color: ${({theme, color}) => color ?? theme.palette.black};
-//   margin: ${({margin}) => margin ?? '0'};
-//   text-align: ${({align}) => TEXT_ALIGN_TEXT_MAP[align ?? TEXT_ALIGN.LEFT]};
-//   align-self: ${({align}) => TEXT_ALIGN_FLEX_MAP[align ?? TEXT_ALIGN.LEFT]};
-//   text-transform: ${({uppercase, capitalize}) =>
-//     uppercase ? 'uppercase' : capitalize ? 'capitalize' : 'none'};
-//   font-family: ${props =>
-//     props.isBold
-//       ? props.theme.font.fontFamily.bold
-//       : props.theme.font.fontFamily.regular};
-// `;
+const StyledText = styled.Text<TextBaseProps>`
+  color: ${props => props.color ?? props.theme.palette.black};
+  font-size: ${({fontSize}) => fontSize}px;
+  line-height: ${({lineHeight}) => lineHeight}px;
+  text-decoration: ${({underline}) => (underline ? 'underline' : '')};
+  text-decoration-color: ${({theme, color}) => color ?? theme.palette.black};
+  margin: ${({margin}) => margin ?? '0'};
+  text-align: ${({align}) => TEXT_ALIGN_TEXT_MAP[align ?? TEXT_ALIGN.LEFT]};
+  align-self: ${({align}) => TEXT_ALIGN_FLEX_MAP[align ?? TEXT_ALIGN.LEFT]};
+  text-transform: ${({uppercase, capitalize}) =>
+    uppercase ? 'uppercase' : capitalize ? 'capitalize' : 'none'};
+  font-family: ${props =>
+    props.isBold
+      ? props.theme.font.fontFamily.bold
+      : props.theme.font.fontFamily.regular};
+`;
 
 const TextBase = ({
   children,
   ...props
 }: React.PropsWithChildren<TextBaseProps>) => (
-  // <StyledView>
-  <Text {...props}>{children}</Text>
-  // </StyledView>
+  <StyledView>
+    <StyledText {...props}>{children}</StyledText>
+  </StyledView>
 );
 
 export default TextBase;

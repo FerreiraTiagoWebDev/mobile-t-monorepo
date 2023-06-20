@@ -24,11 +24,12 @@ const LoginContainer = ({
       // buttons={<RegisterAccountMessage />}
     >
       <>
-        {/* <H1 align={TEXT_ALIGN.CENTER} color={COLORS.WHITE}> */}
-        {/* {I18n.t('auth.login')}
-         */}
-        <Text>My mobile app</Text>
-        {/* </H1> */}
+        <H1 align={TEXT_ALIGN.CENTER} color={COLORS.WHITE}>
+          {/* {I18n.t('auth.login')}
+           */}
+          Test
+          {/* <Text>My mobile app</Text> */}
+        </H1>
         {/* <LoginForm /> */}
       </>
     </ConfirmContainer>
