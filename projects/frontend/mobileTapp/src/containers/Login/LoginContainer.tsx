@@ -1,4 +1,5 @@
 import Button from '@/mobileTapp/components/Button';
+import {LoginForm} from '@/mobileTapp/components/auth';
 import {H1, Text} from '@/mobileTapp/components/typography';
 import {COLORS, TEXT_ALIGN} from '@/mobileTapp/constants';
 import ConfirmContainer from '@/mobileTapp/containers/ConfirmContainer';
@@ -9,7 +10,6 @@ const LoginContainer = ({
 }: {
   navigation: StackNavigationProp<NavigationProps>;
 }) => {
-  console.log('test');
   // const accessToken = useAccessTokenState()
 
   // useEffect(() => {
@@ -25,17 +25,12 @@ const LoginContainer = ({
       // buttons={<RegisterAccountMessage />}
     >
       <>
-        <H1>
+        <H1 align={TEXT_ALIGN.CENTER}>
           {/* {I18n.t('auth.login')}
            */}
-          {'testing'}
-          {/* <Text>My mobile app</Text> */}
+          {'T-App'}
         </H1>
-        {/* <LoginForm /> */}
-        <Button
-          onPress={() => {
-            console.log('test');
-          }}></Button>
+        <LoginForm />
       </>
     </ConfirmContainer>
   );

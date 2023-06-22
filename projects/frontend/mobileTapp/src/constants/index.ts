@@ -1,5 +1,5 @@
 // export { default as APPOINTMENT_STATUSES } from './APPOINTMENT_STATUSES'
-// export { default as APPOINTMENT_TABS } from './APPOINTMENT_TABS'
+export { default as APPOINTMENT_TABS } from './APPOINTMENT_TABS';
 // export { default as APPOINTMENT_TYPES } from './APPOINTMENT_TYPES'
 export { default as COLORS } from './COLORS';
 // export { default as ERROR_TYPES } from './ERROR_TYPES'

@@ -1,3 +1,4 @@
+import MainTabsContainer from '@/mobileTapp/components/MainTabsContainer';
 import LoginContainer from '@/mobileTapp/containers/Login/LoginContainer';
 import defaultTheme from '@/mobileTapp/globalStyles';
 import {getActiveRouteName} from '@/mobileTapp/helpers';
@@ -23,7 +24,7 @@ function App(): JSX.Element {
     }
   };
   // todo
-  const initialRoute = 'Login';
+  const initialRoute = 'MainTabs';
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -44,11 +45,11 @@ function App(): JSX.Element {
             component={LoginContainer}
             options={{headerShown: false}}
           />
-          {/* <Stack.Screen
+          <Stack.Screen
             name="MainTabs"
             component={MainTabsContainer}
             options={{headerShown: false}}
-          /> */}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
