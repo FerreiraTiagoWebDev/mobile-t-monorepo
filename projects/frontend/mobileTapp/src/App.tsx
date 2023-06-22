@@ -26,7 +26,7 @@ function App(): JSX.Element {
   const initialRoute = 'Login';
 
   return (
-    <ThemeProvider theme={defaultTheme as DefaultTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <NavigationContainer
         ref={navigationRef}
         onStateChange={onNavigationStateChange}>

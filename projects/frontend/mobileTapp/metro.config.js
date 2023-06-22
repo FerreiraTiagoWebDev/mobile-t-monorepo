@@ -12,7 +12,7 @@ module.exports = (async() => {
           inlineRequires: false
         }
       }),
-      babelTransformerPath: require.resolve('./custom-transformer.js')
+      // babelTransformerPath: require.resolve('./custom-transformer.js')
     },
     resolver: {
       assetExts: assetExts.filter(ext => ext !== 'svg'),

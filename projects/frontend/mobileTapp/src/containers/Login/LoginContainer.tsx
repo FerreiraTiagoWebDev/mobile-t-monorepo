@@ -1,14 +1,15 @@
-import {H1} from '@/mobileTapp/components/typography';
+import Button from '@/mobileTapp/components/Button';
+import {H1, Text} from '@/mobileTapp/components/typography';
 import {COLORS, TEXT_ALIGN} from '@/mobileTapp/constants';
 import ConfirmContainer from '@/mobileTapp/containers/ConfirmContainer';
 import type {StackNavigationProp} from '@react-navigation/stack';
-import {Text, View} from 'react-native';
 
 const LoginContainer = ({
   navigation,
 }: {
   navigation: StackNavigationProp<NavigationProps>;
 }) => {
+  console.log('test');
   // const accessToken = useAccessTokenState()
 
   // useEffect(() => {
@@ -24,13 +25,17 @@ const LoginContainer = ({
       // buttons={<RegisterAccountMessage />}
     >
       <>
-        <H1 align={TEXT_ALIGN.CENTER} color={COLORS.WHITE}>
+        <H1>
           {/* {I18n.t('auth.login')}
            */}
-          Test
+          {'testing'}
           {/* <Text>My mobile app</Text> */}
         </H1>
         {/* <LoginForm /> */}
+        <Button
+          onPress={() => {
+            console.log('test');
+          }}></Button>
       </>
     </ConfirmContainer>
   );

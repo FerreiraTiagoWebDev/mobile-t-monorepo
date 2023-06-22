@@ -6,7 +6,10 @@ interface TextBaseProps {
   color?: COLORS;
   fontSize: number;
   lineHeight: number;
-  margin?: string;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
+  marginLeft?: number;
   underline?: boolean;
   align?: TEXT_ALIGN;
   isBold?: boolean;
@@ -39,7 +42,11 @@ const StyledText = styled.Text<TextBaseProps>`
   line-height: ${({lineHeight}) => lineHeight}px;
   text-decoration: ${({underline}) => (underline ? 'underline' : '')};
   text-decoration-color: ${({theme, color}) => color ?? theme.palette.black};
-  margin: ${({margin}) => margin ?? '0'};
+  margin-top: ${({marginTop}) => (marginTop ? `${marginTop}px` : '0')};
+  margin-right: ${({marginRight}) => (marginRight ? `${marginRight}px` : '0')};
+  margin-bottom: ${({marginBottom}) =>
+    marginBottom ? `${marginBottom}px` : '0'};
+  margin-left: ${({marginLeft}) => (marginLeft ? `${marginLeft}px` : '0')}
   text-align: ${({align}) => TEXT_ALIGN_TEXT_MAP[align ?? TEXT_ALIGN.LEFT]};
   align-self: ${({align}) => TEXT_ALIGN_FLEX_MAP[align ?? TEXT_ALIGN.LEFT]};
   text-transform: ${({uppercase, capitalize}) =>
