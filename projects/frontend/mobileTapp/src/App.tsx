@@ -24,7 +24,7 @@ function App(): JSX.Element {
     }
   };
   // todo
-  const initialRoute = 'MainTabs';
+  const initialRoute = 'Login';
 
   return (
     <ThemeProvider theme={defaultTheme}>

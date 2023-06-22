@@ -27,7 +27,7 @@ const TextInput = ({
   keyboardType,
   autoFocus,
   textContentType,
-  // autoCompleteType,
+  autoComplete,
   importantForAutofill,
 }: TextInputProps) => {
   const theme = useTheme();
@@ -42,7 +42,7 @@ const TextInput = ({
       keyboardType={keyboardType}
       autoFocus={autoFocus}
       textContentType={textContentType}
-      // autoCompleteType={autoCompleteType}
+      autoComplete={autoComplete}
       importantForAutofill={importantForAutofill}
       placeholderTextColor={theme.palette.grey500}
     />

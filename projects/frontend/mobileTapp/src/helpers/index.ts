@@ -1,5 +1,5 @@
 // export { default as createAlert } from './createAlert'
-// export { default as generateUuid } from './generateUuid'
+export { default as generateUuid } from './generateUuid';
 // export { default as getAppointmentStepLabel } from './getAppointmentStepLabel'
 // export { default as getAppointmentTypeLabel } from './getAppointmentTypeLabel'
 // export { default as getCurrentPosition } from './getCurrentPosition'
